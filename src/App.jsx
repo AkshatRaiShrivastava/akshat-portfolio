@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import "./App.css";
 import About from "./components/about";
 import Contact from "./components/contact";
@@ -28,6 +29,7 @@ const App = () => {
           <Footer/>
         </div>
       </div>
+      <Toaster/>
     </>
   );
 };
