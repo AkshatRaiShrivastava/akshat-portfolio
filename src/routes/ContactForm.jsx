@@ -21,7 +21,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${process.env.BACKEND_URL}/post`, formData);
+      const response = await axios.post("https://akshat-portfolio-backend.onrender.com/post", formData);
       console.log("Response:", response.data);
       toast("Message sent successfully !");
       // alert("Form submitted successfully!");
