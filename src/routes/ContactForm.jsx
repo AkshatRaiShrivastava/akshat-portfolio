@@ -12,6 +12,9 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const payload ={
+    ...formData
+  }
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -21,7 +24,12 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/post`, formData);
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/post`, payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
       console.log("Response:", response.data);
       toast("Message sent successfully !");
       // alert("Form submitted successfully!");
