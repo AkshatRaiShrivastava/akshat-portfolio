@@ -1,11 +1,11 @@
 import { Toaster } from "sonner";
 import "./App.css";
-import About from "./components/about";
+import About from "./components/techs";
 import Contact from "./components/contact";
-import ContactForm from "./components/ContactForm";
+import ContactForm from "./routes/ContactForm";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
-import Home from "./components/Home";
+import Home from "./routes/Home";
 import Navbar from "./components/navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -26,10 +26,10 @@ const App = () => {
         <div className="container mx-auto lg:px-16 px-2">
           <Navbar />
           <RouterProvider router={router} />
-          <Footer/>
+          <Footer />
         </div>
       </div>
-      <Toaster/>
+      <Toaster />
     </>
   );
 };

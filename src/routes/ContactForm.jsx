@@ -3,7 +3,8 @@ import { FaArrowCircleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
-import { toast } from "sonner"
+import { toast } from "sonner";
+import { motion, useScroll } from "motion/react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -20,13 +21,14 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:8080/post", formData);
+      const response = await axios.post(`${process.env.BACKEND_URL}/post`, formData);
       console.log("Response:", response.data);
-      toast("Message sent successfully !")
+      toast("Message sent successfully !");
       // alert("Form submitted successfully!");
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("There was an error submitting the form.");
+      toast("An error occurred !");
+      // alert("There was an error submitting the form.");
     }
   };
 
@@ -37,7 +39,9 @@ const ContactForm = () => {
           <FaArrowCircleLeft />
           Back
         </Link>
-        <div className="items-center  flex justify-center px-10">
+        <motion.div whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -400}}
+        transition={{ duration: 1 }} className="items-center  flex justify-center px-10">
           <div class="p-10 mt-10 bg-[#191917] lg:w-1/3  rounded-2xl flex flex-col gap-5 justify-center w-full">
             <input
               placeholder="Full name"
@@ -68,13 +72,15 @@ const ContactForm = () => {
               required
             />
 
-            <button onClick={handleSubmit} className="p-3 bg-[#101010] rounded-2xl w-auto">
+            <button
+              onClick={handleSubmit}
+              className="p-3 bg-[#101010] rounded-2xl w-auto"
+            >
               Submit
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
-      
     </>
   );
 };

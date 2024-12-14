@@ -7,6 +7,8 @@ import {
   FaSpotify,
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+
+
 const Contact = () => {
     
   return (
@@ -16,7 +18,7 @@ const Contact = () => {
         <h3 className="text-lg text-neutral-500 tracking-widest">
           Feel free to reach out...
         </h3>
-        <div className="flex flex-wrap my-20 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 my-20 gap-10">
           <a href="https://www.linkedin.com/in/akshat-rai-shrivastava-186905293/">
             {" "}
             <div className=" p-5 rounded-2xl bg-[#3f3f4a]">

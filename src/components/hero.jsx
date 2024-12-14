@@ -9,7 +9,7 @@ const Hero = () => {
   });
   return (
     <>
-      <div className="border-b border-neutral-600 flex lg:flex-row flex-col-reverse items-center px-10 mb-10 pb-10 lg:gap-40 gap-20">
+      <div className="border-b border-neutral-500 flex lg:flex-row flex-col-reverse items-center px-10 mb-10 pb-16 lg:gap-40 gap-20">
         <div className="">
           <motion.h1
             variants={container(0)}
