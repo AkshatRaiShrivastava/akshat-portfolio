@@ -39,7 +39,7 @@ const Admin = ()=>{
     return(
         <>
         <h1 className="text-2xl text-neutral-200">{messages.length == 0?"No messages":"Your Messages"}</h1>
-        <div className="sm:grid-cols-1 grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
+        <div className="grid-cols-1 lg:grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
         
           {messages.map((message) => (
             <div className="border border-neutral-500 rounded-3xl p-3" key={message.index}>
