@@ -23,6 +23,7 @@ import { toast } from "sonner";
 const Navbar = () => {
   const [pass, setPass] = useState({password:""})
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false); 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPass({ ...pass, [name]: value });
@@ -30,6 +31,7 @@ const Navbar = () => {
   const handleSubmit = () =>{
     if(pass.password == `${import.meta.env.VITE_ADMIN_PASS}`){
       navigate("/admin")
+      setIsOpen(false); 
     }else{
       toast("Wrong password !")
     }
@@ -50,7 +52,7 @@ const Navbar = () => {
           <a href="https://www.instagram.com/cloud.crusader/">
             <FaInstagram />
           </a>
-          <AlertDialog>
+          <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
             <AlertDialogTrigger asChild>
             <MdOutlineAdminPanelSettings/>
             </AlertDialogTrigger>
