@@ -8,12 +8,17 @@ import Hero from "./components/hero";
 import Home from "./routes/Home";
 import Navbar from "./components/navbar";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Admin from "./routes/Admin";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/contact",
       element: <ContactForm />,
+    },
+    {
+      path:"/admin",
+      element:<Admin/>
     },
     {
       path: "/",

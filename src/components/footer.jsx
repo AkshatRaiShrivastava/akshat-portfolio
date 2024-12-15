@@ -1,4 +1,5 @@
 import logo from "../assets/akshat_logo.png"
+import { Link } from "react-router-dom";
 
 const Footer=()=>{
     return(
