@@ -39,7 +39,7 @@ const Admin = ()=>{
     return(
         <>
         <h1 className="text-2xl text-neutral-200">{messages.length == 0?"No messages":"Your Messages"}</h1>
-        <div className="grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
+        <div className="sm-grid-cols-1 grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
         
           {messages.map((message) => (
             <div className="border border-neutral-500 rounded-3xl p-3" key={message.index}>
@@ -47,7 +47,7 @@ const Admin = ()=>{
                 <h1>Email : {message.email}</h1>
                 <p className="text-base text-neutral-400">{message.message}</p>
                 <h4 className="text-sm text-neutral-600">Time : {message.createdAt}</h4>
-                <button onClick={()=>deleteMessage(message._id)}>Delete</button>
+                <button className="bg-red-500 px-2" onClick={()=>deleteMessage(message._id)}>Delete</button>
             </div>
           ))}
         
