@@ -7,34 +7,40 @@ import Footer from "./components/footer";
 import Hero from "./components/hero";
 import Home from "./routes/Home";
 import Navbar from "./components/navbar";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, createBrowserRouter, Route,Routes, RouterProvider } from "react-router-dom";
 import Admin from "./routes/Admin";
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/contact",
-      element: <ContactForm />,
-    },
-    {
-      path:"/admin",
-      element:<Admin/>
-    },
-    {
-      path: "/",
-      element: <Home />,
-    },
-  ]);
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/contact",
+  //     element: <ContactForm />,
+  //   },
+  //   {
+  //     path:"/admin",
+  //     element:<Admin/>
+  //   },
+  //   {
+  //     path: "/",
+  //     element: <Home />,
+  //   },
+  // ]);
   return (
     <>
+    <BrowserRouter>
       <div className="w-full h-full fixed overflow-x-hidden text-neutral-300 antialiased bg-[#101010]">
         <div className="container mx-auto lg:px-16 px-2">
           <Navbar />
-          <RouterProvider router={router} />
+          <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/admin" element={<Admin/>}/>
+      </Routes>
           <Footer />
         </div>
       </div>
       <Toaster />
+    </BrowserRouter>
     </>
   );
 };
