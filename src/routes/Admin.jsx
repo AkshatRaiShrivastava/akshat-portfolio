@@ -47,7 +47,7 @@ const Admin = ()=>{
                 <h1>Email : {message.email}</h1>
                 <p className="text-base text-neutral-400">{message.message}</p>
                 <h4 className="text-sm text-neutral-600">Time : {message.createdAt}</h4>
-                <button className="bg-red-500 px-2 rounded-2xl mt-2 justify-center text-neutral-300" onClick={()=>deleteMessage(message._id)}>Delete</button>
+                <button className="bg-red-500 px-3 py-2 rounded-2xl mt-2 justify-center text-base text-neutral-300" onClick={()=>deleteMessage(message._id)}>Delete</button>
             </div>
           ))}
         
