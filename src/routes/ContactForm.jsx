@@ -84,7 +84,7 @@ const ContactForm = () => {
               onClick={handleSubmit}
               className="p-3 bg-[#101010] rounded-2xl w-auto"
             >
-              Submit
+              Send
             </button>
           </div>
         </motion.div>
