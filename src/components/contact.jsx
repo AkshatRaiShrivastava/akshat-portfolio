@@ -1,3 +1,4 @@
+import { CONTACT_CONTENT } from "../contants";
 import { FaLink, FaLinkedin } from "react-icons/fa";
 import {
   FaGithub,
@@ -15,8 +16,8 @@ const Contact = () => {
     <>
       <div className=" px-10 py-20 pb-4 border-b border-neutral-500 mb-20">
         <h1 className="text-4xl mb-5 tracking-wider">Contact</h1>
-        <h3 className="text-lg text-neutral-500 tracking-widest">
-          Feel free to reach out...
+        <h3 className="text-xl text-neutral-500 tracking-widest">
+         {CONTACT_CONTENT}
         </h3>
         <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 my-20 gap-10">
           <a href="https://www.linkedin.com/in/akshat-rai-shrivastava-186905293/">
@@ -73,6 +74,7 @@ const Contact = () => {
             </div>
           </Link>
         </div>
+        
       </div>
     </>
   );
