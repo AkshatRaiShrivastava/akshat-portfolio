@@ -48,7 +48,7 @@ const Admin = () => {
         {messages.length == 0 ? "No messages" : "Your Messages"}
       </h1>
       {isLoading ? (
-        <button type="button" className="roundex-lg bg-indigo-500" disabled>
+        <button type="button" className="mt-20 rounded-lg bg-indigo-500" disabled>
           <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24"></svg>
           Fetching...
         </button>
