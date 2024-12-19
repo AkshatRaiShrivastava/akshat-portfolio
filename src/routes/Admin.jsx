@@ -42,11 +42,13 @@ const Admin = () => {
 
   return (
     <>
+    <div className="flex flex-col items-center justify-center">
+
       <h1 className="text-2xl text-neutral-200">
         {messages.length == 0 ? "No messages" : "Your Messages"}
       </h1>
       {isLoading ? (
-        <button type="button" class="bg-indigo-500" disabled>
+        <button type="button" className="roundex-lg bg-indigo-500" disabled>
           <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24"></svg>
           Fetching...
         </button>
@@ -56,7 +58,7 @@ const Admin = () => {
             <div
               className="border border-neutral-500 rounded-3xl p-3"
               key={message.index}
-            >
+              >
               <h1>Name : {message.name}</h1>
               <h1>Email : {message.email}</h1>
               <p className="text-base text-neutral-400">{message.message}</p>
@@ -66,13 +68,14 @@ const Admin = () => {
               <button
                 className="bg-red-500 px-3 py-2 rounded-2xl mt-2 justify-center text-base text-neutral-300"
                 onClick={() => deleteMessage(message._id)}
-              >
+                >
                 Delete
               </button>
             </div>
           ))}
         </div>
       )}
+          </div>
     </>
   );
 };
