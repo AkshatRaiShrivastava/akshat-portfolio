@@ -45,17 +45,14 @@ const Admin = () => {
       <h1 className="text-2xl text-neutral-200">
         {messages.length == 0 ? "No messages" : "Your Messages"}
       </h1>
-      <div className="grid-cols-1 lg:grid grid-cols-2 h-screen gap-7 mt-10 mb-10">
-        {isLoading ? (
-          <button type="button" class="bg-indigo-500" disabled>
-            <svg
-              class="animate-spin h-5 w-5 mr-3 ..."
-              viewBox="0 0 24 24"
-            ></svg>
-            Fetching...
-          </button>
-        ) : (
-          messages.map((message) => (
+      {isLoading ? (
+        <button type="button" class="bg-indigo-500" disabled>
+          <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24"></svg>
+          Fetching...
+        </button>
+      ) : (
+        <div className="grid-cols-1 lg:grid grid-cols-2 h-screen gap-7 mt-10 mb-10">
+          {messages.map((message) => (
             <div
               className="border border-neutral-500 rounded-3xl p-3"
               key={message.index}
@@ -73,9 +70,9 @@ const Admin = () => {
                 Delete
               </button>
             </div>
-          ))
-        )}
-      </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };
