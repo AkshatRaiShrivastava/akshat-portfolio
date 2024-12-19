@@ -53,7 +53,7 @@ const Admin = () => {
           Fetching...
         </button>
       ) : (
-        <div className="grid-cols-1 lg:grid grid-cols-2 h-screen gap-7 mt-10 mb-10">
+        <div className="grid-cols-1 lg:grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
           {messages.map((message) => (
             <div
               className="border border-neutral-500 rounded-3xl p-3"
