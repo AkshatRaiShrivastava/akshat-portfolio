@@ -45,9 +45,9 @@ const Admin = () => {
       <h1 className="text-2xl text-neutral-200">
         {messages.length == 0 ? "No messages" : "Your Messages"}
       </h1>
-      <div className="grid-cols-1 lg:grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
+      <div className="grid-cols-1 lg:grid grid-cols-2 h-screen gap-7 mt-10 mb-10">
         {isLoading ? (
-          <button type="button" class="bg-indigo-500 ..." disabled>
+          <button type="button" class="bg-indigo-500" disabled>
             <svg
               class="animate-spin h-5 w-5 mr-3 ..."
               viewBox="0 0 24 24"
