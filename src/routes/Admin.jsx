@@ -1,5 +1,5 @@
 import { toast } from "sonner";
-
+import loader from "../assets/loading.svg";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
@@ -48,10 +48,7 @@ const Admin = () => {
         {messages.length == 0 ? "No messages" : "Your Messages"}
       </h1>
       {isLoading ? (
-        <button type="button" className="mt-20 rounded-lg px-3 py-2 bg-indigo-500" disabled>
-          <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24"></svg>
-          Fetching...
-        </button>
+        <image src={loader} width={70}/>
       ) : (
         <div className="grid-cols-1 lg:grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
           {messages.map((message) => (
