@@ -1,5 +1,5 @@
 import { toast } from "sonner";
-import loader from "../assets/loading.svg";
+import loader from "../assets/loading.gif";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
