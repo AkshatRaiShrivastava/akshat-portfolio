@@ -48,7 +48,7 @@ const Admin = () => {
         {messages.length == 0 ? "No messages" : "Your Messages"}
       </h1>
       {isLoading ? (
-        <image src={loader} width={70}/>
+        <h3>Loading...</h3>
       ) : (
         <div className="grid-cols-1 lg:grid grid-cols-2 h-auto gap-7 mt-10 mb-10">
           {messages.map((message) => (
