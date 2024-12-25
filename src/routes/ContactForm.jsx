@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { motion, useScroll } from "motion/react";
 
 const ContactForm = () => {
+  const [sent , setSent] = useState[true]
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,6 +25,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
+      setSent(false)
       const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/post`, payload,
         {
           headers: {
@@ -33,6 +35,7 @@ const ContactForm = () => {
       console.log("Response:", response.data);
       toast("Message sent successfully !");
       // alert("Form submitted successfully!");
+      setSent(true)
     } catch (error) {
       console.error("Error submitting form:", error);
       toast("An error occurred !");
@@ -84,7 +87,7 @@ const ContactForm = () => {
               onClick={handleSubmit}
               className="p-3 bg-[#101010] rounded-2xl w-auto"
             >
-              Send
+              {sent?"Send":"Sending..."}
             </button>
           </div>
         </motion.div>
