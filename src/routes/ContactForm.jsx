@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { motion, useScroll } from "motion/react";
 
 const ContactForm = () => {
-  const [sent , setSent] = useState[true]
+  const [sent , setSent] = useState(true)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
