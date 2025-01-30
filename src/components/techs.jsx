@@ -2,7 +2,7 @@ import { DiAndroid, DiJava } from "react-icons/di";
 import { SiAmazonwebservices, SiAndroid, SiC, SiDart, SiFirebase, SiFlutter, SiFramer, SiGithub, SiJavascript, SiKotlin, SiMongodb, SiNetlify, SiNextdotjs, SiNodedotjs, SiReact, SiShadcnui, SiSpringboot, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
 
 const Techs = () => {
-    
+      
   return (
     <>
       <div className="px-10 py-20 border-b border-neutral-500 pb-4">
