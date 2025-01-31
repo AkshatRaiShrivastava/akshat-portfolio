@@ -9,11 +9,13 @@ const ProjectCard = ({
 }) => {
   return (
     <div className="bg-[#1E1E1E] rounded-lg overflow-hidden shadow-xl flex flex-col h-full">
-      <img
-        src={imageUrl || "/placeholder.svg"}
-        alt={title}
-        className="w-full h-48 object-cover"
-      />
+      <a href={imageUrl}>
+        <img
+          src={imageUrl || "/placeholder.svg"}
+          alt={title}
+          className="w-full h-48 object-cover"
+        />
+      </a>
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold text-white">{title}</h3>
         <p className="text-gray-400">{description}</p>

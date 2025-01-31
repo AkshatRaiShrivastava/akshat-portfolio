@@ -6,6 +6,8 @@ import pr5 from "../assets/pr5.png";
 import pr6 from "../assets/pr6.png";
 import pr7 from "../assets/pr7.png";
 import pr8 from "../assets/pr8.png";
+import pr9 from "../assets/pr9.png";
+import pr10 from "../assets/pr10.png";
 
 export const HERO_CONTENT = `I am a passionate and dedicated professional with a strong background in Java, Spring Boot, Android Development, Web Development and SCADA Development. With hands-on experience in TypeScript, Next.js, Spring Boot, Java, Kotlin, Flutter.`;
 
@@ -83,7 +85,14 @@ export const projects = [
     description:
       "It is a clothing app, which shows the latest and trendy clothing styles and wears.",
     imageUrl: pr5,
-    technologies: ["Android", "Java", "XML", "Firebase","Firestore","Android Studio"],
+    technologies: [
+      "Android",
+      "Java",
+      "XML",
+      "Firebase",
+      "Firestore",
+      "Android Studio",
+    ],
     githubUrl: "https://github.com/AkshatRaiShrivastava/wee-wear",
     liveUrl: "https://github.com/AkshatRaiShrivastava/wee-wear/releases",
     timePer: "Aug 2024 - Sept 2024",
@@ -104,6 +113,23 @@ export const projects = [
     githubUrl: "https://github.com/AkshatRaiShrivastava/music_stream",
     liveUrl: "https://github.com/AkshatRaiShrivastava/music_stream/releases",
     timePer: "Aug 2024 - Sept 2024",
+  },
+  {
+    title: "SCADA Application",
+    description:
+      "A desktop application which centralise and digitalise the data from various machines and work stations.",
+    imageUrl: pr9,
+    technologies: ["C#", "Windows Development", "SQL", "Modbus", "TCPIP"],
+    liveUrl: "https://mvmultitechcontrols.com/downloads",
+    timePer: "Mar 2023 - Jan 2024",
+  },
+  {
+    title: "MVMC Website",
+    description: "A responsive website for M V Multitech Controls",
+    imageUrl: pr10,
+    technologies: ["HTML", "CSS", "Javascript"],
+    liveUrl: "https://mvmultitechcontrols.com/s",
+    timePer: "Sep 2023 - Oct 2023",
   },
   // Add more projects as needed
 ];
