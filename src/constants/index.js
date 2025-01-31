@@ -83,7 +83,7 @@ export const projects = [
     description:
       "It is a clothing app, which shows the latest and trendy clothing styles and wears.",
     imageUrl: pr5,
-    technologies: ["Android", "Java", "XML", "Firebase"],
+    technologies: ["Android", "Java", "XML", "Firebase","Firestore","Android Studio"],
     githubUrl: "https://github.com/AkshatRaiShrivastava/wee-wear",
     liveUrl: "https://github.com/AkshatRaiShrivastava/wee-wear/releases",
     timePer: "Aug 2024 - Sept 2024",
