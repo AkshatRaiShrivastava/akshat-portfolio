@@ -115,6 +115,15 @@ export const projects = [
     timePer: "Aug 2024 - Sept 2024",
   },
   {
+    title: "SCADA Application",
+    description:
+      "A desktop application which centralise and digitalise the data from various machines and work stations.",
+    imageUrl: pr9,
+    technologies: ["C#", "Windows Development", "SQL", "Modbus", "TCPIP"],
+    liveUrl: "https://mvmultitechcontrols.com/downloads",
+    timePer: "Mar 2023 - Jan 2024",
+  },
+  {
     title: "MVMC Website",
     description: "A responsive website for M V Multitech Controls",
     imageUrl: pr10,
