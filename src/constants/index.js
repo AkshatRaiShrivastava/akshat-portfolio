@@ -128,7 +128,7 @@ export const projects = [
     description: "A responsive website for M V Multitech Controls",
     imageUrl: pr10,
     technologies: ["HTML", "CSS", "Javascript"],
-    liveUrl: "https://mvmultitechcontrols.com/s",
+    liveUrl: "https://mvmultitechcontrols.com",
     timePer: "Sep 2023 - Oct 2023",
   },
   // Add more projects as needed
