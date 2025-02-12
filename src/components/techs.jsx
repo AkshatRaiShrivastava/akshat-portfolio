@@ -14,6 +14,7 @@ import {
   SiNetlify,
   SiNextdotjs,
   SiNodedotjs,
+  SiPostman,
   SiReact,
   SiShadcnui,
   SiSpringboot,
@@ -86,6 +87,10 @@ const Techs = () => {
           Services and Tools
         </h3>
         <div className="p-10 grid grid-cols-1 text-neutral-500 gap-x-2 gap-y-2 px-4 md:grid-cols-3 lg:grid-cols-4">
+          <div className=" flex flex-row gap-3 items-center rounded-2xl border-4 border-neutral-800 p-4">
+            <SiPostman className="text-5xl p-2 text-orange-500" />{" "}
+            <h1 className="text-xl">Postman</h1>
+          </div>
           <div className=" flex flex-row gap-3 items-center rounded-2xl border-4 border-neutral-800 p-4">
             <SiFirebase className="text-5xl p-2 text-orange-500" />{" "}
             <h1 className="text-xl">Firebase</h1>
