@@ -1,0 +1,8 @@
+{
+  "routes": [
+    {
+      "src": "/api/visitors",
+      "dest": "/api/visitors.js"
+    }
+  ]
+}
