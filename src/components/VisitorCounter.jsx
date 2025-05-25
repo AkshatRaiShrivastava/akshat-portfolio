@@ -1,25 +1,51 @@
 import { useEffect, useState } from "react";
+import { initializeApp } from "firebase/app";
+import {
+  getDatabase,
+  ref,
+  onValue,
+  increment,
+  update,
+} from "firebase/database";
+
+const firebaseConfig = {
+  // Get these values from your Firebase console
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 const VisitorCounter = () => {
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const updateVisitorCount = async () => {
-      try {
-        const response = await fetch("/api/visitors");
-        const data = await response.json();
-        if (data.count) {
-          setCount(data.count);
-        }
-      } catch (error) {
-        console.error("Error updating visitor count:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+    const visitorCountRef = ref(database, "visitorCount");
 
-    updateVisitorCount();
+    // Get initial value and increment once
+    onValue(
+      visitorCountRef,
+      (snapshot) => {
+        const data = snapshot.val();
+        const currentCount = data?.count || 0;
+
+        if (!data) {
+          // If no count exists, initialize with 1
+          update(visitorCountRef, { count: 1 });
+        } else {
+          // Increment only on first load
+          update(visitorCountRef, { count: currentCount + 1 });
+        }
+
+        setCount(currentCount);
+        setLoading(false);
+      },
+      { onlyOnce: true } // Add this option to trigger only once
+    );
   }, []);
 
   if (loading) {
