@@ -40,7 +40,7 @@ const Contact = () => {
             </div>
           </a>
 
-          <a href="https://www.instagram.com/cloud.crusader/">
+          <a href="https://www.instagram.com/build.gradle.akshat/">
             {" "}
             <div className=" p-5 rounded-2xl bg-[#3f3f4a]">
               <div className="flex flex-row justify-between items-center">
